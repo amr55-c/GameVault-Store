@@ -1,18 +1,15 @@
-# 🎮 GameVault-Store
-## Course: EC 385 - Introduction to E-Business (Spring 2026)
+# 🎮 GameVault Store
+**Student Name:** [ِAmr Hassan]
+**Course:** EC 385 - E-Business
 
-### 📋 Project Overview
-A professional B2C e-commerce platform dedicated to selling digital and physical video games, providing a seamless shopping experience for gamers.
+## 📝 Project Overview
+A professional B2C e-commerce platform for selling digital and physical video games.
 
-### 🚀 Lab 1 Deliverables (Checklist)
-- [x] **Business Model:** B2C (Business to Consumer)
-- [x] **Tech Stack Selection:** - **Frontend:** React.js
-  - **Backend:** Node.js (Express.js)
-  - **Database:** MongoDB
-- [x] **Version Control:** Repository initiated on GitHub.
-- [x] **Collaboration:** Course instructors invited as collaborators.
+## 🛠️ Tech Stack
+* **Frontend:** Vue.js 3 (Vuetify)
+* **Backend:** Node.js & Express.js
+* **Database:** MongoDB
 
-### 👤 Student Information
-- **Name:** [ِAmr Hassan]
-- **Department:** Computer Engineering
-- **University:** Pharos University in Alexandria (PUA)
+## 📂 Project Structure
+* `/client`: VueJS Frontend Application
+* `/server`: Node.js Backend API
