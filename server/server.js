@@ -12,7 +12,7 @@ app.use(express.json());
 app.use('/products', productRoutes);
 
 app.get('/', (req, res) => {
-    res.send('Welcome to GameVault API - Lab 3 MVC is Ready!');
+    res.send('GameVault Server is up and running!');
 });
 
 app.listen(PORT, () => {

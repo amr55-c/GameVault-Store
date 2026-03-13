@@ -6,7 +6,7 @@ exports.getProducts = (req, res) => {
 };
 
 exports.getProductById = (req, res) => {
-    const product = products.find(p => p.id === parseInt(req.params.id));
-    if (!product) return res.status(404).json({ message: 'Product not found' });
-    res.json(product);
+    const item = products.find(p => p.id === parseInt(req.params.id));
+    if (!item) return res.status(404).json({ message: 'Item not found in our vault' });
+    res.json(item);
 };
