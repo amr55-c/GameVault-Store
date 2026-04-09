@@ -1,9 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const gameController = require('../controllers/productController');
+const productController = require('../controllers/productController');
 
-router.get('/', gameController.getAllGames);
-router.post('/', gameController.addGame);
-router.delete('/:id', gameController.deleteGame);
+router.use((req, res, next) => {
+    console.log(`[Product Router] Request received at: ${new Date().toISOString()}`);
+    next();
+});
+
+router.get('/', productController.getAllGames);
+router.post('/', productController.addGame);
+router.delete('/:id', productController.deleteGame);
 
 module.exports = router;
