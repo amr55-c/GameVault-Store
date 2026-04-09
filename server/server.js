@@ -12,4 +12,6 @@ app.use('/api/products', productRoutes);
 const PORT = 5000;
 app.listen(PORT, () => {
     console.log(`Vault Server is running on http://localhost:${PORT}`);
+    const cors = require('cors');
+app.use(cors());
 });
