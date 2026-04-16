@@ -27,7 +27,7 @@ export default {
   methods: {
     handleLogin() {
       if (this.username === 'admin' && this.password === '123') {
-        localStorage.setItem('userToken', 'fake-jwt-token');
+       sessionStorage.setItem('userToken', 'admin-token');
         this.$router.push('/checkout');
       } else {
         alert('Invalid credentials');

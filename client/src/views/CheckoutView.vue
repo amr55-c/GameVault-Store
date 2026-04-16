@@ -27,7 +27,10 @@
         <h2>Your Cart 🛒</h2>
         <ul v-if="cartStore.items.length > 0" class="cart-list">
           <li v-for="(item, index) in cartStore.items" :key="index">
-            {{ item.name }} <span>(${{ item.price }})</span>
+            <div>
+              {{ item.name }} <span>(${{ item.price }})</span>
+            </div>
+            <button @click="cartStore.removeGame(index)" class="remove-btn">❌</button>
           </li>
         </ul>
         <p v-else>Cart is empty.</p>
@@ -40,7 +43,7 @@
 </template>
 
 <script>
-import ProductCard from '../components/ProductCard.vue';    
+import ProductCard from '../components/ProductCard.vue';
 import { cartStore } from '../stores/CartStore';
 
 export default {
@@ -84,6 +87,8 @@ export default {
 .cart-section { flex: 1; background: #f9f9f9; padding: 20px; border-radius: 10px; height: fit-content; border: 1px solid #ddd; }
 .buy-btn { background: #1e90ff; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; width: 100%; }
 .cart-list { list-style: none; padding: 0; }
-.cart-list li { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px dotted #ccc; }
+.cart-list li { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 1px dotted #ccc; }
+.remove-btn { background: none; border: none; cursor: pointer; font-size: 0.9rem; }
+.remove-btn:hover { transform: scale(1.2); }
 .total-box { margin-top: 15px; border-top: 2px solid #333; }
 </style>
