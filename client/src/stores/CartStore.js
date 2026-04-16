@@ -1,12 +1,16 @@
-import { reactive } from 'vue'; 
+import { reactive } from 'vue';
 
-export const cartStore = reactive({    
-  state: {
-    items: [],
-    total: 0
-  },
+export const cartStore = reactive({
+  items: [],
+  total: 0,
+  
   addGame(game) {
-    this.state.items.push(game);
-    console.log("Game added to global store!");
+    this.items.push(game);
+    this.total += game.price;  
+  },
+  
+  clearCart() {
+    this.items = [];
+    this.total = 0;
   }
 });

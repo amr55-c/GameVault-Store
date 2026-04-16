@@ -1,11 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import CheckoutView from '../views/CheckoutView.vue'; 
+import CheckoutView from '../views/CheckoutView.vue';
+import LoginView from '../views/LoginView.vue';   
 
 const routes = [
-  { 
-    path: '/', 
-    component: CheckoutView 
-  },
+  { path: '/', component: CheckoutView },   
+  { path: '/login', component: LoginView },   
   { 
     path: '/checkout', 
     component: CheckoutView, 
@@ -19,9 +18,9 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-  const token = localStorage.getItem('userToken'); // Session Persistence
-  if (to.matched.some(record => record.meta.requiresAuth) && !token) {
-    next('/');
+  const token = localStorage.getItem('userToken'); 
+  if (to.meta.requiresAuth && !token) {
+    next('/login');
   } else {
     next();
   }
