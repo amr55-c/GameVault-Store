@@ -26,7 +26,7 @@ export default {
   },
   methods: {
     handleLogin() {
-      if (this.username === 'admin' && this.password === '123') {
+      if (this.username === 'admin' && this.password === '1234') {
        sessionStorage.setItem('userToken', 'admin-token');
         this.$router.push('/checkout');
       } else {
